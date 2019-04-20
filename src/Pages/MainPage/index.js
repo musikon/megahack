@@ -1,10 +1,6 @@
 import React from 'react'
-import Chart from '../../container/Chart'
+import Dashboard from '../../container/Dashboard'
 
-const MainPage = () => (
-  <div>
-    MainPage
-  </div>
-);
+const MainPage = props => <Dashboard {...props} />;
 
 export default MainPage

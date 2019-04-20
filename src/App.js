@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { simpleAction } from './actions/simpleActions';
 
 import Router from './Router'
-import Layout from './components/Layout'
 
 import './App.css';
 
@@ -23,11 +22,7 @@ class App extends Component {
   };
 
   render() {
-    return (
-      <Layout>
-        <Router />
-      </Layout>
-    )
+    return <Router />
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(App);
