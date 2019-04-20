@@ -3,7 +3,7 @@ import Chart from '../../container/Chart'
 
 const MainPage = () => (
   <div>
-    <Chart />
+    MainPage
   </div>
 );
 
