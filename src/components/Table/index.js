@@ -17,6 +17,9 @@ const styles = theme => ({
   table: {
     minWidth: 700,
   },
+  row: {
+    cursor: 'pointer'
+  }
 });
 
 const defaultRows = [
@@ -64,7 +67,12 @@ const Table = ({ classes, rows = defaultRows, history }) => (
       </TableHead>
       <TableBody>
         {rows.map(row => (
-          <TableRow key={row.id} onClick={() => console.log(history.push(`/user/${row.id}`))}>
+          <TableRow
+            key={row.id}
+            onClick={() => history.push(`/user/${row.id}`)}
+            hover
+            className={classes.row}
+          >
             <TableCell align="left">{row.name}</TableCell>
             <TableCell align="left">{row.timeWork}</TableCell>
             <TableCell align="left">{row.timeProgram}</TableCell>
