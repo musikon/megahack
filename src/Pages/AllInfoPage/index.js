@@ -1,9 +1,6 @@
 import React from 'react'
+import AllInfo from '../../container/AllInfo'
 
-const AllInfoPage = () => (
-  <div>
-    info
-  </div>
-);
+const AllInfoPage = () => (<AllInfo />);
 
 export default AllInfoPage
