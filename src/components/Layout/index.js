@@ -78,7 +78,7 @@ const styles = theme => ({
 const Layout = ({ children, classes, ...other}) => (
   <div className={classes.root}>
     <CssBaseline />
-    <AppBar position="absolute" color="default" className={classes.appBar}>
+    <AppBar position="fixed" color="default" className={classes.appBar}>
       <Toolbar>
         <Typography variant="h6" color="inherit">
 

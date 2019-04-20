@@ -1,7 +1,6 @@
 import React from 'react'
+import User from '../../container/User'
 
-const User = () => (
-  <div>User</div>
-);
+const UserPage = props => <User {...props} />;
 
-export default User
+export default UserPage
