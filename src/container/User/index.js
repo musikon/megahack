@@ -4,10 +4,15 @@ import Chart from '../Chart'
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-
 import Info from '../../components/Info'
 
+import { connect } from 'react-redux';
+
+import { getUser } from '../../actions/allActions';
+
 const defaultName = 'Yurii Kosygin';
+
+
 
 const styles = () => ({
   root: {
@@ -81,16 +86,30 @@ const dataInfo = [
   }
 ];
 
+const mapStateToProps = state => ({
+  ...state
+});
+
+const mapDispatchToProps = dispatch => ({
+  getUser: () => dispatch(getUser())
+});
+
 class User extends Component {
   state = {
     value: 0,
   };
 
+  componentDidMount() {
+    this.props.getUser()
+  }
+
   handleChange = (event, value) => {
     this.setState({ value });
   };
   render() {
-    const { classes, name = defaultName, data = dataInfo } = this.props
+    const { classes, name = defaultName, data = dataInfo } = this.props;
+    const { userData } = this.props.allReducer;
+    console.log(userData)
     return (
       <div className={classes.root}>
         <div className={classes.title}>
@@ -123,4 +142,6 @@ class User extends Component {
   }
 }
 
-export default withStyles(styles)(User)
+const UserContainer = connect(mapStateToProps, mapDispatchToProps)(User);
+
+export default withStyles(styles)(UserContainer)
