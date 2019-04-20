@@ -1,19 +1,8 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-
-import { simpleAction } from './actions/simpleActions';
 
 import Router from './Router'
 
 import './App.css';
-
-const mapStateToProps = state => ({
-  ...state
-});
-
-const mapDispatchToProps = dispatch => ({
-  simpleAction: () => dispatch(simpleAction())
-});
 
 class App extends Component {
 
@@ -25,4 +14,4 @@ class App extends Component {
     return <Router />
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
