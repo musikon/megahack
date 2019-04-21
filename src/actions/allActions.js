@@ -3,7 +3,7 @@ import apiCall from '../utils/apiCall'
 export const getUser = () => dispatch => {
   return apiCall({
     method: 'GET',
-    path: '',
+    path: '/user',
   }).then(response => {
     dispatch({
       type: 'GET_USER',
