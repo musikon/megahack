@@ -3,7 +3,7 @@ import request from 'axios';
 
 export default (params) => {
   const method = params.method;
-  const apiHost = 'http://148.251.153.226:4787';
+  const apiHost = 'https://xalt.fun';
 
   const query = params.query ? `?${ qs.stringify(params.query) }` : '';
 

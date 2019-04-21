@@ -4,7 +4,9 @@ import Chart from '../Chart'
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Info from '../../components/Info'
+import Info from '../../components/Info';
+
+import ChartBussnes from '../ChartBussnes'
 
 import { connect } from 'react-redux';
 
@@ -28,7 +30,8 @@ const styles = () => ({
   infoContainer: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
+    marginBottom: 60,
   },
   paper: {
     width: 480,
@@ -66,7 +69,7 @@ const dataInfo = [
     title: 'Not at work',
     content: [
       {
-        name: 'PornoHub',
+        name: 'PornHub',
         time: '3h'
       },
     ]
@@ -137,6 +140,18 @@ class User extends Component {
             ))
           }
         </div>
+        <div className={classes.title}>
+          Buisness process <span className={classes.name}>{name}</span>
+        </div>
+        <ChartBussnes tableId={1} />
+        <div className={classes.title}>
+          Buisness process <span className={classes.name}>{name}</span>
+        </div>
+        <ChartBussnes tableId={2} />
+        <div className={classes.title}>
+          Buisness process <span className={classes.name}>{name}</span>
+        </div>
+        <ChartBussnes tableId={3} />
       </div>
     )
   }
