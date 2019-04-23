@@ -5,6 +5,7 @@ export const getUser = () => dispatch => {
     method: 'GET',
     path: '/user',
   }).then(response => {
+    console.log(response)
     dispatch({
       type: 'GET_USER',
       userData: response
@@ -21,8 +22,5 @@ export const getUsers = () => dispatch => {
       type: 'GET_USER',
       userData: response
     })
-  }).catch(error => console.log(error));;
+  }).catch(error => console.log(error));
 }
-
-
-
