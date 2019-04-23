@@ -24,7 +24,7 @@ const mapDispatchToProps = dispatch => ({
 
 class Dashboard extends Component {
   componentDidMount() {
-    this.props.getUsers()
+    //this.props.getUsers()
   }
 
   render() {

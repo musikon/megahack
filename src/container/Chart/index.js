@@ -6,7 +6,7 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 
 am4core.useTheme(am4themes_animated);
 
-const data = [
+const dataTable = [
   {
     title: "IE",
     value: 260
@@ -32,6 +32,7 @@ const data = [
 class Chart extends Component {
 
   componentDidMount() {
+    const { data = dataTable } = this.props;
     let chart = am4core.create("chartdiv", am4charts.PieChart);
 
     chart.data = data;

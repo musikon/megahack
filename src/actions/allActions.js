@@ -5,24 +5,22 @@ export const getUser = () => dispatch => {
     method: 'GET',
     path: '/user',
   }).then(response => {
+    console.log(response)
     dispatch({
       type: 'GET_USER',
       userData: response
     })
-  }).catch(error => console.log(error));;
+  }).catch(error => console.log(error));
 }
 
 export const getUsers = () => dispatch => {
   return apiCall({
     method: 'GET',
-    path: '/user',
+    path: '/users',
   }).then(response => {
     dispatch({
       type: 'GET_USER',
       userData: response
     })
-  }).catch(error => console.log(error));;
+  }).catch(error => console.log(error));
 }
-
-
-
